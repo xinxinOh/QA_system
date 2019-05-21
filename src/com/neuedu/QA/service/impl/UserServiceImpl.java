@@ -7,7 +7,8 @@ import com.neuedu.QA.service.UserService;
 public class UserServiceImpl implements UserService{
 	
 	public UserInfoDaoImpl userInfoDaoImpl = new UserInfoDaoImpl();
-
+	
+	
 	@Override
 	public String Login(String id, String password) {
 		// TODO Auto-generated method stub
