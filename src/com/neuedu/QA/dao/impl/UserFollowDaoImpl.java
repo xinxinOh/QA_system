@@ -4,11 +4,9 @@ import java.sql.ResultSet;
 
 import com.neuedu.QA.dao.UserFollowDao;
 import com.neuedu.QA.dbutil.BaseDao;
-import com.sun.org.apache.bcel.internal.generic.SALOAD;
-import com.sun.org.apache.bcel.internal.generic.Select;
 
 public class UserFollowDaoImpl extends BaseDao implements UserFollowDao {
-
+	
 	@Override
 	public ResultSet SelectAllFollow(String user_id) {
 		// TODO Auto-generated method stub

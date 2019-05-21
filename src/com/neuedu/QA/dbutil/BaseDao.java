@@ -27,13 +27,13 @@ public class BaseDao {
 	
 	public Connection getCon(){
 		try {
-			Class.forName(driver);//锟斤拷锟斤拷mysql锟斤拷锟斤拷
+			Class.forName(driver);//加载mysql驱动
 			con=DriverManager.getConnection(url,user,pwd);
 		} catch (ClassNotFoundException e) {
-			System.out.println("锟斤拷锟斤拷锟斤拷锟斤拷失锟斤拷");
+			System.out.println("驱动加载失败");
 			e.printStackTrace();
 		} catch (SQLException e) {
-			System.out.println("锟斤拷锟接斤拷锟斤拷失锟斤拷");
+			System.out.println("连接建立失败");
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -110,7 +110,6 @@ public class BaseDao {
 					pst.setObject(i+1, params[i]);//为sql锟叫碉拷每一锟斤拷?锟斤拷值
 				}
 			}
-			
 			rs=pst.executeQuery();
 		} catch (Exception e) {
 			e.printStackTrace();

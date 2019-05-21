@@ -10,9 +10,10 @@ public class Comment {
 	private Date disscuss_date;
 	private Integer upvote_num;
 	private Integer downvote_num;
-	public Comment(Integer comment_id, Integer answer_id, String content, Date disscuss_date, Integer upvote_num,
+	public Comment(Integer comment_id, Integer answer_id, String user_id, String content, Date disscuss_date, Integer upvote_num,
 			Integer downvote_num) {
 		super();
+		this.user_id = user_id;
 		this.comment_id = comment_id;
 		this.answer_id = answer_id;
 		this.content = content;
