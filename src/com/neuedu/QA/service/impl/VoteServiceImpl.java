@@ -1,12 +1,17 @@
 package com.neuedu.QA.service.impl;
 
-import com.neuedu.QA.dao.impl.QuestionDaoImpl;
+import com.neuedu.QA.dao.impl.AnswerDaoImpl;
+import com.neuedu.QA.dao.impl.CommentDaoImpl;
+import com.neuedu.QA.entity.UserVote;
 import com.neuedu.QA.service.VoteService;
 
 public class VoteServiceImpl implements VoteService{
-	QuestionDaoImpl questionDaoImpl;
-	
 
+	public AnswerDaoImpl answerDaoImpl=new AnswerDaoImpl();
+	public CommentDaoImpl commentDaoImpl=new CommentDaoImpl();
+	public UserVote userVote=new UserVote();
+	
+	
 	@Override
 	public int updateAnswerOrComment(int ID, int type) {
 		// TODO Auto-generated method stub
